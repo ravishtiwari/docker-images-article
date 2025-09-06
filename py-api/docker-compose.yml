@@ -1,0 +1,79 @@
+
+version: '3.8'
+
+services:
+  db:
+    image: pgvector/pgvector:pg15
+    environment:
+      POSTGRES_DB: imdb_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:password@db:5432/imdb_db
+      - DEBUG=true
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - .:/app
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+
+  migration:
+    build: .
+    environment:
+      - DATABASE_URL=postgresql://postgres:password@db:5432/imdb_db
+    depends_on:
+      db:
+        condition: service_healthy
+    command: ["alembic", "upgrade", "head"]
+    volumes:
+      - .:/app
+
+  # Ubuntu-based service alternative
+  app_ubuntu:
+    build:
+      context: .
+      dockerfile: Dockerfile.ubuntu
+    ports:
+      - "8001:8000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:password@db:5432/imdb_db
+      - DEBUG=true
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - .:/app
+    command: ["gunicorn", "main:app", "-c", "gunicorn_conf.py"]
+
+  # Ubuntu-based migration service
+  migration_ubuntu:
+    build:
+      context: .
+      dockerfile: Dockerfile.ubuntu
+    environment:
+      - DATABASE_URL=postgresql://postgres:password@db:5432/imdb_db
+    depends_on:
+      db:
+        condition: service_healthy
+    command: ["alembic", "upgrade", "head"]
+    volumes:
+      - .:/app
+
+volumes:
+  postgres_data:
