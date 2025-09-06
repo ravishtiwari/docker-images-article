@@ -1,5 +1,3 @@
-
-
 # ===============================
 # 1. Build stage
 # ===============================
@@ -12,17 +10,20 @@ COPY go.mod go.sum ./
 RUN go mod download
 
 COPY . .
-RUN CGO_ENABLED=1 GOOS=linux go build -o todo-app main.go
+# Build fully static binary
+RUN CGO_ENABLED=1 GOOS=linux go build \
+    -ldflags '-linkmode external -extldflags "-static"' \
+    -o /app/todo-app main.go
 
 # ===============================
-# 2. Final stage (Distroless)
+# 2. Final stage (Distroless Static)
 # ===============================
-FROM gcr.io/distroless/base-debian12
+FROM gcr.io/distroless/static-debian12
 
 WORKDIR /app
-COPY --from=builder /app/todos.db ./todos.db
-COPY --from=builder /app/todo-app .
+COPY --from=builder /app/todo-app /app/todo-app
+COPY --from=builder /app/todos.db /app/todos.db
 
 EXPOSE 8000
 USER nonroot:nonroot
-CMD ["./todo-app"]
+CMD ["/app/todo-app"]

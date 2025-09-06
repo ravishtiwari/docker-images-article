@@ -1,0 +1,354 @@
+{
+  "document": "doc.report.command",
+  "version": "ov/command/slim/1.1",
+  "engine": "linux/amd64|ALP|x.1.42.4|5ee41eee4c93be3e9c753ac164f19d9c5cf8c57e|2025-07-29_07:57:29AM|x",
+  "containerized": false,
+  "host_distro": {
+    "name": "Ubuntu",
+    "version": "22.04",
+    "display_name": "Ubuntu 22.04.5 LTS"
+  },
+  "type": "slim",
+  "state": "error",
+  "error": "no.exposed.ports",
+  "target_reference": "ubuntu22:heavy",
+  "system": {
+    "type": "",
+    "release": "",
+    "distro": {
+      "name": "",
+      "version": "",
+      "display_name": ""
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": ""
+    },
+    "size": 0,
+    "size_human": "",
+    "create_time": "",
+    "architecture": "",
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 0,
+  "minified_image_size_human": "",
+  "minified_image": "",
+  "minified_image_id": "",
+  "minified_image_digest": "",
+  "minified_image_has_data": false,
+  "minified_by": 0,
+  "artifact_location": "",
+  "container_report_name": "",
+  "seccomp_profile_name": "",
+  "apparmor_profile_name": "",
+  "image_stack": [
+    {
+      "is_top_image": false,
+      "id": "sha256:802541663949fbd5bbd8f35045af10005f51885164e798e2ee8d1dc39ed8888d",
+      "full_name": "ubuntu:24.04",
+      "repo_name": "ubuntu",
+      "version_tag": "24.04",
+      "raw_tags": [
+        "ubuntu:24.04"
+      ],
+      "create_time": "2025-08-19T14:37:01Z",
+      "new_size": 78122536,
+      "new_size_human": "78 MB",
+      "instructions": [
+        {
+          "type": "ARG",
+          "time": "2025-08-19T14:36:58Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "RELEASE",
+          "command_snippet": "ARG RELEASE",
+          "command_all": "ARG RELEASE",
+          "inst_set_time_bucket": "2025-08-19T20:00:00+05:30",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 3
+        },
+        {
+          "type": "ARG",
+          "time": "2025-08-19T14:36:58Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "LAUNCHPAD_BUILD_ARCH",
+          "command_snippet": "ARG LAUNCHPAD_BUILD_ARCH",
+          "command_all": "ARG LAUNCHPAD_BUILD_ARCH",
+          "inst_set_time_bucket": "2025-08-19T20:00:00+05:30",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 3
+        },
+        {
+          "type": "LABEL",
+          "time": "2025-08-19T14:36:58Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "org.opencontainers.image.ref.name=ubuntu",
+          "command_snippet": "LABEL org.opencontainers.image.ref.name=ubun...",
+          "command_all": "LABEL org.opencontainers.image.ref.name=ubuntu",
+          "inst_set_time_bucket": "2025-08-19T20:00:00+05:30",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 3
+        },
+        {
+          "type": "LABEL",
+          "time": "2025-08-19T14:36:58Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "org.opencontainers.image.version=24.04",
+          "command_snippet": "LABEL org.opencontainers.image.version=24.04",
+          "command_all": "LABEL org.opencontainers.image.version=24.04",
+          "inst_set_time_bucket": "2025-08-19T20:00:00+05:30",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 3
+        },
+        {
+          "type": "ADD",
+          "time": "2025-08-19T14:37:00Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 78122536,
+          "size_human": "78 MB",
+          "params": "file:e67907c77897d27192314f6c4fa0112b6f7dce3e127500516535cc50fe736c92 in /",
+          "command_snippet": "ADD file:e67907c77897d27192314f6c4fa0112b6f7...",
+          "command_all": "ADD file:e67907c77897d27192314f6c4fa0112b6f7dce3e127500516535cc50fe736c92 /",
+          "target": "/",
+          "source_type": "file",
+          "inst_set_time_bucket": "2025-08-19T20:00:00+05:30",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 3
+        },
+        {
+          "type": "CMD",
+          "time": "2025-08-19T14:37:01Z",
+          "is_last_instruction": true,
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/bin/bash\"]\n",
+          "command_snippet": "CMD [\"/bin/bash\"]\n",
+          "command_all": "CMD [\"/bin/bash\"]\n",
+          "raw_tags": [
+            "ubuntu:24.04"
+          ],
+          "inst_set_time_bucket": "2025-08-19T20:00:00+05:30",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 3
+        }
+      ]
+    },
+    {
+      "is_top_image": true,
+      "id": "sha256:316f6def0327573587b733b4a8c3ab690f28ed435eb0bc17f64b1bcbb30036a2",
+      "full_name": "ubuntu22:heavy",
+      "repo_name": "ubuntu22",
+      "version_tag": "heavy",
+      "raw_tags": [
+        "ubuntu22:heavy"
+      ],
+      "create_time": "2025-09-04T17:20:01Z",
+      "new_size": 789798245,
+      "new_size_human": "790 MB",
+      "base_image_id": "sha256:802541663949fbd5bbd8f35045af10005f51885164e798e2ee8d1dc39ed8888d",
+      "instructions": [
+        {
+          "type": "RUN",
+          "time": "2025-09-03T18:15:06Z",
+          "is_nop": false,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:a5f0d1e66c1430685caf97fe40e3a1ae0bf9e6d000973af9893197d8c37c1437",
+          "layer_index": 0,
+          "size": 53444002,
+          "size_human": "53 MB",
+          "command_snippet": "RUN apt-get update",
+          "command_all": "RUN apt-get update",
+          "system_commands": [
+            "apt-get update"
+          ],
+          "inst_set_time_bucket": "2025-09-03T23:45:00+05:30",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 2
+        },
+        {
+          "type": "RUN",
+          "time": "2025-09-03T18:16:34Z",
+          "is_nop": false,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:2e4d1563eae0d0fa5969927876066b7f358ed63085a3854edaedb4db01e310ab",
+          "layer_index": 0,
+          "size": 419640714,
+          "size_human": "420 MB",
+          "command_snippet": "RUN apt-get install -y python3 python3-pip p...",
+          "command_all": "RUN apt-get install -y python3 python3-pip python3-dev",
+          "system_commands": [
+            "apt-get install -y python3 python3-pip python3-dev"
+          ],
+          "inst_set_time_bucket": "2025-09-03T23:45:00+05:30",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 2
+        },
+        {
+          "type": "RUN",
+          "time": "2025-09-04T17:07:18Z",
+          "is_nop": false,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:38cfc58a1b53c7bdbc811d17c92e05d5fe773813e237e33c2f190a27a3341659",
+          "layer_index": 0,
+          "size": 27085146,
+          "size_human": "27 MB",
+          "command_snippet": "RUN apt-get install -y git",
+          "command_all": "RUN apt-get install -y git",
+          "system_commands": [
+            "apt-get install -y git"
+          ],
+          "inst_set_time_bucket": "2025-09-04T22:30:00+05:30",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "RUN",
+          "time": "2025-09-04T17:07:30Z",
+          "is_nop": false,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:6d4b11dc96a17cd9afdd6a7d28c777729a52a6be6bed34ee422804c40e015de8",
+          "layer_index": 0,
+          "size": 8603886,
+          "size_human": "8.6 MB",
+          "command_snippet": "RUN apt-get install -y python3-venv pipx",
+          "command_all": "RUN apt-get install -y python3-venv pipx",
+          "system_commands": [
+            "apt-get install -y python3-venv pipx"
+          ],
+          "inst_set_time_bucket": "2025-09-04T22:30:00+05:30",
+          "inst_set_time_index": 2,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "COPY",
+          "time": "2025-09-04T17:19:27Z",
+          "is_nop": true,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:d829cf6e713a705539fa519cebf324dba8a98c41fdbbdbe84e67feb6dbdfd9ba",
+          "layer_index": 0,
+          "size": 45,
+          "size_human": "45 B",
+          "params": "file:85f4366461ad58cf0f4c45107a7bc3ff428605ed9c04ede6a0010f0e71e2ae8c in ./app/",
+          "command_snippet": "COPY file:85f4366461ad58cf0f4c45107a7bc3ff42...",
+          "command_all": "COPY file:85f4366461ad58cf0f4c45107a7bc3ff428605ed9c04ede6a0010f0e71e2ae8c ./app/",
+          "target": "./app/",
+          "source_type": "file",
+          "inst_set_time_bucket": "2025-09-04T22:45:00+05:30",
+          "inst_set_time_index": 3,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "COPY",
+          "time": "2025-09-04T17:19:27Z",
+          "is_nop": true,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:81b37f6bdf5d8d200bc91c33fa63d383a53d13084e8218dd938fc79e8bc22bfa",
+          "layer_index": 0,
+          "size": 471,
+          "size_human": "471 B",
+          "params": "multi:cde1e94ffa96a6e87e263d5357c891774a3352db9c6fb61e138ba2b80bada106 in ./app/",
+          "command_snippet": "COPY multi:cde1e94ffa96a6e87e263d5357c891774...",
+          "command_all": "COPY multi:cde1e94ffa96a6e87e263d5357c891774a3352db9c6fb61e138ba2b80bada106 ./app/",
+          "target": "./app/",
+          "source_type": "multi",
+          "inst_set_time_bucket": "2025-09-04T22:45:00+05:30",
+          "inst_set_time_index": 3,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "WORKDIR",
+          "time": "2025-09-04T17:19:27Z",
+          "is_nop": true,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:01954586f886bfbd29298bcaf92f93a14f94587d1d15f7051b115752c211206f",
+          "layer_index": 0,
+          "size": 0,
+          "params": "/app",
+          "command_snippet": "WORKDIR /app",
+          "command_all": "WORKDIR /app",
+          "system_commands": [
+            "mkdir -p /app"
+          ],
+          "inst_set_time_bucket": "2025-09-04T22:45:00+05:30",
+          "inst_set_time_index": 3,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "RUN",
+          "time": "2025-09-04T17:19:32Z",
+          "is_nop": false,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:804bc66c7832b064de1cf8d019fd2ed878a03b2c1ce1df507cf091a6efab5368",
+          "layer_index": 0,
+          "size": 13170642,
+          "size_human": "13 MB",
+          "command_snippet": "RUN python3 -m venv /home/ubuntu/venv",
+          "command_all": "RUN python3 -m venv /home/ubuntu/venv",
+          "system_commands": [
+            "python3 -m venv /home/ubuntu/venv"
+          ],
+          "inst_set_time_bucket": "2025-09-04T22:45:00+05:30",
+          "inst_set_time_index": 3,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "ENV",
+          "time": "2025-09-04T17:19:32Z",
+          "is_nop": true,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:671b54da5145159c807e29575d107e0e836d36385b72814f03ef7846d826c1cf",
+          "layer_index": 0,
+          "size": 0,
+          "params": "PATH=/home/ubuntu/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "command_snippet": "ENV PATH=/home/ubuntu/venv/bin:/usr/local/sb...",
+          "command_all": "ENV PATH=/home/ubuntu/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "inst_set_time_bucket": "2025-09-04T22:45:00+05:30",
+          "inst_set_time_index": 3,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "RUN",
+          "time": "2025-09-04T17:20:01Z",
+          "is_last_instruction": true,
+          "is_nop": false,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 267853339,
+          "size_human": "268 MB",
+          "command_snippet": "RUN pip3 install -r requirements.txt",
+          "command_all": "RUN pip3 install -r requirements.txt",
+          "system_commands": [
+            "pip3 install -r requirements.txt"
+          ],
+          "raw_tags": [
+            "ubuntu22:heavy"
+          ],
+          "inst_set_time_bucket": "2025-09-04T22:45:00+05:30",
+          "inst_set_time_index": 3,
+          "inst_set_time_reverse_index": 0
+        }
+      ]
+    }
+  ],
+  "image_created": false,
+  "image_build_engine": ""
+}
