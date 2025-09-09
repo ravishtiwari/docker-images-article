@@ -10,10 +10,12 @@ Contains a dummy main.py and dockerfile for Ubuntu based fat Image setup. This d
 Contains an IMDB style FastAPI to demonstrate python docker image. This project showcases how to containerize a FastAPI application with proper structure including models, controllers, and database migrations.
 
 ### ./todo
-Contains small golang api to demonstrate distroless and multi-stage docker build. This example shows advanced Docker techniques for creating minimal, secure container images.
+Contains small golang api to demonstrate distroless and multi-stage docker build. This example shows advanced Docker techniques for creating minimal, secure container images with Distroless.
 
 ### ./scripts/tools-setup.sh
 Contains bash script to install all tools required for the project setup and development environment.
+> all the tools I have installed locally with the above setup script only, so, tested on Ubuntu.
+
 
 ## Contributing
 
@@ -31,3 +33,6 @@ This project is free and open-source. Feel free to use, contribute, and share.
 ## Support
 
 For questions and support, please open an issue in the GitHub repository.
+## Acknowledgements
+I appreciate your interest in this project and welcome your feedback and contributions.
+> I hope you find this repository helpful for learning and implementing containerization strategies effectively.
