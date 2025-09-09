@@ -10,6 +10,12 @@ A simple TODO CRUD API written in Go, using SQLite, containerized with a multi-s
 docker-compose up --build
 ```
 
+## 🚀 Run with Docker Run
+
+```bash
+ docker run --mount type=bind,source=$(pwd)/data,target=/app/db -p 8000:8000 todo:light
+```
+
 API runs at: [http://localhost:8000](http://localhost:8000)
 
 ---

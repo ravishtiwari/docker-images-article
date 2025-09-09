@@ -1,2 +1,189 @@
 README.md
 docker-compose.yml
+# Git
+.git
+.gitignore
+.gitattributes
+.gitmodules
+
+# Documentation
+README.md
+*.md
+docs/
+LICENSE
+CHANGELOG.md
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+Jenkinsfile
+.travis.yml
+.circleci/
+.drone.yml
+azure-pipelines.yml
+
+# Go specific
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+dist/
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+*.prof
+coverage.txt
+coverage.html
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Dependency directories (if using vendor)
+vendor/
+
+# Go module cache (not needed in container)
+#go.sum
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.vim/
+.emacs.d/
+*.sublime-*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+log/
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+*.tmp
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+*.env
+
+# Database files (if not needed in container)
+*.db
+*.sqlite
+*.sqlite3
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Kubernetes
+*.yaml
+*.yml
+k8s/
+manifests/
+
+# Terraform
+*.tf
+*.tfstate
+*.tfvars
+terraform/
+
+# Development scripts
+scripts/dev/
+Makefile
+makefile
+
+# Air (Go live reload tool)
+.air.toml
+tmp/
+
+# Testing
+testdata/
+*_test.go
+test/
+tests/
+
+# Benchmarks
+*.bench
+
+# Node modules (if you have frontend assets)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Frontend build artifacts (if applicable)
+dist/
+build/
+public/build/
+
+# Configuration files (development only)
+config/local/
+config/dev/
+*.local.json
+*.dev.json
+
+# Certificates (should be mounted or injected)
+*.pem
+*.key
+*.crt
+*.p12
+certs/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Cache directories
+.cache/
+cache/
+
+# Profiling files
+*.pprof
+profile.out
+mem.out
+cpu.out
+
+# Swagger/OpenAPI generated files (if regenerated in container)
+swagger/
+api/swagger/
+
+# Migration files (if handled separately)
+migrations/
+
+# Local development tools
+.golangci.yml
+.pre-commit-config.yaml
+
+# Build artifacts from different architectures
+*-linux-*
+*-darwin-*
+*-windows-*
+data/

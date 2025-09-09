@@ -22,7 +22,7 @@ var db *sql.DB
 
 func main() {
 	var err error
-	db, err = sql.Open("sqlite3", "./todos.db")
+	db, err = sql.Open("sqlite3", "./db/todos.db")
 	if err != nil {
 		log.Fatal(err)
 	}

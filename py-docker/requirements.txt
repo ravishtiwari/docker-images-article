@@ -1,0 +1,7 @@
+fastapi
+boto3
+six
+axios
+pandas
+pytest
+jinja2

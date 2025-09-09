@@ -6,7 +6,7 @@ FROM golang:1.22-alpine AS builder
 WORKDIR /app
 RUN apk add --no-cache gcc musl-dev
 
-COPY go.mod go.sum ./
+COPY go.mod  ./
 RUN go mod download
 
 COPY . .
@@ -22,7 +22,8 @@ FROM gcr.io/distroless/static-debian12
 
 WORKDIR /app
 COPY --from=builder /app/todo-app /app/todo-app
-COPY --from=builder /app/todos.db /app/todos.db
+# COPY --from=builder /app/todos.db /app/todos.db 
+# mount
 
 EXPOSE 8000
 USER nonroot:nonroot
